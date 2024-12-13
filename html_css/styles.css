@@ -1,0 +1,243 @@
+/* Body Styling */
+body {
+    background-color: #FFD700;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+.nav {
+    background-color: #FFD700;
+    padding: 10px 20px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content:center;
+    gap: 30px;
+    position:relative; /* Keeps navbar fixed at the top */
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #3F4E4F;
+    cursor: pointer;
+}
+
+/* Container for All Sections */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 50px; /* Space below fixed navbar */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+/* Card Section (Intro Section) */
+.card {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 50px;
+    border-radius: 30px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* Wraps the content on small screens */
+}
+
+/* Left Text Section */
+.text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.text h1 {
+    color: #3F4E4F;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #3F4E4F;
+    margin-bottom: 30px;
+}
+
+/* Buttons Section */
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background-color: #FFC046;
+    border: 2px solid #3F4E4F;
+    color: #3F4E4F;
+    font-weight: bold;
+}
+
+.btn.secondary {
+    background-color: transparent;
+    border: 2px solid #3F4E4F;
+    color: #3F4E4F;
+    font-weight: bold;
+}
+
+/* Right Image Section */
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 85%;
+    object-fit:contain;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Styling (For About, Projects, Contact) */
+.section {
+    padding: 40px; /* Adjust to match the intro section */
+    margin: 20px auto; /* Center alignment and spacing between sections */
+    max-width: 800px; /* Keep consistent width */
+    text-align: center; /* Align text like the intro section */
+    background-color: #fff; /* Ensure a clean background */
+    border-radius: 30px; /* Add a slight border-radius for uniformity */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Light shadow for separation */
+}
+
+/* Section Titles */
+.section h2 {
+    color: #3F4E4F;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Section Text */
+.section p, .section ul {
+    font-size: 1rem;
+    color: #3F4E4F;
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 0;
+    text-align: justify;
+    max-width: 700px;
+}
+
+.section ul {
+    list-style-type: disc;
+    padding-left: 0;
+    margin:0 auto;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    background-color: #FFD700; /* Yellow background */
+    color: #3F4E4F; /* Dark text */
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .contact-header h2 {
+    font-size: 30px;
+    color: #3F4E4F;
+    margin-bottom: 10px;
+  }
+  
+  .contact-header p {
+    font-size: 16px;
+    color: #3F4E4F;
+    margin-bottom: 30px;
+  }
+  
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .contact-link {
+    background-color: #FFFFFF; /* White button */
+    color: #3F4E4F; /* Dark text */
+    border: 2px solid #3F4E4F;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .contact-link:hover {
+    background-color: #FFC046; /* Hover effect */
+    color: #3F4E4F;
+  }
+
+/* Make Sections Responsive */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        height: auto;
+        padding: 30px;
+    }
+
+    .card .image {
+        margin-top: 20px;
+    }
+
+    .image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .section {
+        padding: 50px 20px;
+    }
+
+    .text h1 {
+        font-size: 28px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+    .contact-links {
+        flex-direction: column;
+        gap: 15px;
+      }
+}
